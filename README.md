@@ -21,3 +21,35 @@ public function boot()
     Schema::defaultStringLength(191);
 }
 ```
+
+### Secret API_KEY or Other on Gradle
+
+> 1. Add /gradle.properties into gitignore file.
+> 2. Add line in Gradle.properties file "API_KEY = "CopyYourAPI_KEYhere""
+> 3. Add below line in app:build.gradle buildConfigField("String", "API_KEY", API_KEY)
+> 4. Use Key using the following statement "BuildConfig.API_KEY" Copy this whereever do you need API_KEY
+
+__Example__ :
+gradle.properties
+```
+API_KEY="TooManySecrets"
+```
+build.gradle (app)
+```
+defaultConfig {
+    applicationId "com.texturelabs.rosera.pop_movies"
+    minSdkVersion 14
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+
+    // Please ensure you have a valid API KEY for themoviedb.org↵
+       to use this app
+    // A valid key will need to be entered
+    buildConfigField("String", "API_KEY", API_KEY)
+  }
+```
+Java file
+```
+private static final String API_KEY = BuildConfig.API_KEY;
+```
