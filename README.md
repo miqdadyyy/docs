@@ -37,9 +37,9 @@ API_KEY="TooManySecrets"
 build.gradle (app)
 ```
 defaultConfig {
-    applicationId "com.texturelabs.rosera.pop_movies"
-    minSdkVersion 14
-    targetSdkVersion 23
+    applicationId "com.miqdad.myProjects"
+    minSdkVersion 16
+    targetSdkVersion 27
     versionCode 1
     versionName "1.0"
 
