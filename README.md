@@ -53,3 +53,19 @@ Java file
 ```
 private static final String API_KEY = BuildConfig.API_KEY;
 ```
+
+
+### RecycleView ItemClick Support on MainActivity
+> __ Code : __
+> [Code](./RV_OnClickListener.md)
+>
+> __ Usage : __
+```
+ItemClickSupport.addTo(rvBooks).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+            @Override
+            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+                // action code here
+            }
+        });
+```
+
