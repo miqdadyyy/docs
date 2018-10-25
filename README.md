@@ -56,10 +56,10 @@ private static final String API_KEY = BuildConfig.API_KEY;
 
 
 ### RecycleView ItemClick Support on MainActivity
-__ Code : __
+__Code__ :
 > [Code](./RV_OnClickListener.md)  
 
-__ Usage : __
+__Usage__ :
 ```
 ItemClickSupport.addTo(rvBooks).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
