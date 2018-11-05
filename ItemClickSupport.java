@@ -1,4 +1,4 @@
-```
+
 public class ItemClickSupport {
     private final RecyclerView mRecyclerView;
     private OnItemClickListener mOnItemClickListener;
@@ -81,4 +81,4 @@ public class ItemClickSupport {
         boolean onItemLongClicked(RecyclerView recyclerView, int position, View v);
     }
 }
-```
+
