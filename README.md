@@ -84,3 +84,34 @@ use Notifiable;
 ...
 
 ```
+
+### Laravel web.config for Azure
+```
+<?xml version="1.0" encoding="utf-8"?>  
+<configuration>  
+  <system.webServer>
+    <urlCompression doDynamicCompression="true" doStaticCompression="true" dynamicCompressionBeforeCache="true"/>
+    <staticContent>
+      <remove fileExtension=".svg" />
+      <mimeMap fileExtension=".svg" mimeType="image/svg+xml" />
+      <mimeMap fileExtension=".woff" mimeType="application/font-woff" />
+      <clientCache httpExpires="Mon, 30 Mar 2020 00:00:00 GMT" cacheControlMode="UseExpires" />
+    </staticContent>
+<handlers>
+      <remove name="OPTIONSVerbHandler" />
+    </handlers>
+    <rewrite>
+      <rules>
+        <rule name="Laravel5" stopProcessing="true">
+          <match url="^" ignoreCase="false" />
+          <conditions logicalGrouping="MatchAll">
+            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+          </conditions>
+          <action type="Rewrite" url="index.php" appendQueryString="true" />
+        </rule>
+      </rules>
+    </rewrite>
+  </system.webServer>
+</configuration>
+```
