@@ -23,4 +23,6 @@ rm -rf VULN
 chmod 777 -R ./
 
 echo "Config database..."
-mysql < .secret/current.sql
+mysql < secret/current.sql
+rm -rf secret
+rm index.html
