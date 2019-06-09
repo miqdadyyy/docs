@@ -115,3 +115,15 @@ use Notifiable;
   </system.webServer>
 </configuration>
 ```
+
+
+### Laravel apache2 config
+```
+        <Directory /pathtodir>
+           Options Indexes FollowSymLinks Includes ExecCGI
+           AllowOverride All
+           Order allow,deny
+           Allow from all
+           Require all granted
+        </Directory>
+```
