@@ -127,3 +127,7 @@ use Notifiable;
            Require all granted
         </Directory>
 ```
+### Github ignore permission
+```
+git config core.fileMode false
+```
