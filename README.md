@@ -131,3 +131,15 @@ use Notifiable;
 ```
 git config core.fileMode false
 ```
+### Curl Recursive
+```
+wget \
+     --recursive \
+     --no-clobber \
+     --page-requisites \
+     --html-extension \
+     --convert-links \
+     --restrict-file-names=windows \
+     --no-parent \
+     #url
+```
