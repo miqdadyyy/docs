@@ -143,3 +143,8 @@ wget \
      --no-parent \
      #url
 ```
+
+
+```
+C:\Users\pppppppppppppppppppp\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\rootpixel
+```
