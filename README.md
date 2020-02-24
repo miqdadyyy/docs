@@ -166,3 +166,13 @@ server {
     }
 }
 ```
+
+### Apache Reverse Proxy
+```
+        ServerName yourdomain.com
+#		Redirect permanent / https://yourdomain.com/
+        ProxyPreserveHost On
+        ProxyRequests Off
+        ProxyPass / http://0.0.0.0:9000/
+        ProxyPassReverse / http://0.0.0.0:9000/
+```
