@@ -181,3 +181,8 @@ server {
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
 ```
+
+### Install php with deps
+```
+apt install php php-cli php-dom php-mbstring php-gd php-dom php-mysql php-curl php-zip
+```
