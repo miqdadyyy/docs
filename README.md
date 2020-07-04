@@ -176,3 +176,8 @@ server {
         ProxyPass / http://0.0.0.0:9000/
         ProxyPassReverse / http://0.0.0.0:9000/
 ```
+
+### Install docker with script
+```
+curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
+```
